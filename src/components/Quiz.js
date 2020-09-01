@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { FaThumbsUp, FaThumbsDown, FaRandom } from 'react-icons/fa';
+import DiscreteSlider from './Slider';
 
 
 function Quiz() {
@@ -9,6 +10,7 @@ function Quiz() {
     let [pageNum, setPageNum] = useState("");
     let [thisMovie, setThisMovie] = useState("");
     let [moviePoster, setMoviePoster] = useState("");
+    let [sliderValue, setSliderValue] = useState("");
 
     let myQuery = `https://api.themoviedb.org/3/movie/popular?api_key=6f483d8afd56f030d7d97f6492987784&language=en-US&page=${pageNum}`;
   
@@ -30,6 +32,15 @@ function Quiz() {
        getInfo()
     }, []) 
 
+    function getData(val){
+        // do not forget to bind getData in constructor
+     
+        setSliderValue(val);
+    }
+
+    function getSliderVal() {
+        console.log(sliderValue)
+    }
 
 
     return(
@@ -38,12 +49,16 @@ function Quiz() {
            <p>{thisMovie.title}</p>
             
             <div className="vote-wrap">
-                <FaThumbsUp className="thumb t-up" />
-            <FaRandom
+   {/*             <FaThumbsUp className="thumb t-up" />
+                <FaThumbsDown className="thumb t-down" /> */}
+                <DiscreteSlider sendData={getData} />
+                <FaRandom
             onClick={getInfo}
             className="reroll thumb"
             />
-                <FaThumbsDown className="thumb t-down" />
+            <button
+              onClick={getSliderVal} 
+             >Send</button>
             </div>
         </div>
     );
