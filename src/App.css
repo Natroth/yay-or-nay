@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: #61dafb;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,105 @@
     transform: rotate(360deg);
   }
 }
+
+
+.bg-container{
+
+  height: 100%;
+  width: 100%;
+  float: left;
+  top: 0;
+  padding: none;
+  position: fixed; /* optional depending on what you want to do in your app */
+  z-index: -1;
+  opacity: .5;
+  }
+
+  .title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: #696969 1px 1px;
+  }
+
+  .intro-wrap {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: fantasy;
+    border-radius: 10px;
+    box-shadow: #c0c0c0 1px 1px;
+  }
+  .vote-wrap {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  .thumb {
+    font-size: 2rem;
+    border-radius: 30px;
+    padding: 7px; 
+    color: #fff;
+    transition: font-size .2s;
+  }
+
+  .thumb:hover {
+    font-size: 2.3rem;
+
+  }
+
+
+  .t-up {
+    background-color: green;
+  }
+
+  .t-down {
+    background-color: red;
+  }
+
+  .myLogo {
+    max-width: 20rem;
+    border-radius: 20px; 
+    margin: 2rem; 
+    box-shadow: #c0c0c0 1px 1px;
+  }
+
+  .reroll {
+    border: none;
+    background-color: none;
+  
+    font-weight: bold;
+    color: #696969;
+  }
+
+  .lets-begin {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    padding: 8px;
+    color: #fff;
+    background-color: #c0c0c0;
+    border-radius: 5px; 
+    text-shadow: 1px 1px #696969;
+  }
+
+  .cutt {
+    width: 30rem;
+    max-width: 300px;
+  }
+
+  .welcome-wrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 35rem;
+  
+  }
