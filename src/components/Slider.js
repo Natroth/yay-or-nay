@@ -31,7 +31,6 @@ export default function DiscreteSlider(props) {
       <Slider
         defaultValue={5}
         getAriaValueText={getValue}
-        onChangeCommitted={getValue}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
         step={1}

@@ -1,7 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import { FaThumbsUp, FaThumbsDown, FaRandom } from 'react-icons/fa';
 import DiscreteSlider from './Slider';
-
+import Result from './Result';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function Quiz() {
 
@@ -34,7 +40,7 @@ function Quiz() {
 
     function getData(val){
         // do not forget to bind getData in constructor
-     
+        console.log(val);
         setSliderValue(val);
     }
 
@@ -59,6 +65,13 @@ function Quiz() {
             <button
               onClick={getSliderVal} 
              >Send</button>
+            
+             <Link to={{
+                 pathname:'/result',
+                 resultProps: {
+                     testvalue: sliderValue
+                 }
+             }}>Find Out</Link>
             </div>
         </div>
     );
