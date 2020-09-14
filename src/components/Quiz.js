@@ -69,7 +69,8 @@ function Quiz() {
              <Link to={{
                  pathname:'/result',
                  resultProps: {
-                     testvalue: sliderValue
+                     slider: sliderValue,
+                     voteAverage: thisMovie.vote_average
                  }
              }}>Find Out</Link>
             </div>

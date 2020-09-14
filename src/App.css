@@ -69,7 +69,6 @@
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: fantasy;
     border-radius: 10px;
     box-shadow: #c0c0c0 1px 1px;
   }
@@ -120,7 +119,6 @@
   }
 
   .lets-begin {
-    font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     padding: 8px;
     color: #fff;
@@ -142,3 +140,18 @@
     height: 35rem;
   
   }
+
+
+.progress-div {
+  background-color: rgb(233, 233, 233);
+  border-radius: .5rem;
+}
+
+.progress {
+    background-color: rgb(62, 122, 235);
+    height: 10px;
+    border-radius: 1rem;
+    transition: 1s ease;
+    transition-delay: 0.1s;
+
+}

@@ -2,11 +2,12 @@ import React, {useEffect, useState} from 'react';
 import { render } from '@testing-library/react';
 import Quiz from './Quiz';
 import { useHistory } from "react-router-dom";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import ProgressBar from './ProgressBar'; 
 
 
 
-const Result = (props) => {
+var Result = (props) => {
 
 
     console.log(props.location.resultProps);
@@ -19,10 +20,15 @@ const Result = (props) => {
         }
 
 
-     let rating = myProps.testvalue;
+     let rating = myProps.slider;
+     let voteAverage = Math.round(myProps.voteAverage);
 
     return(
-        <p>{rating}</p>
+        <div>
+            <p>{rating}</p>
+            <p>{voteAverage}</p>
+            <ProgressBar width={100} percent={voteAverage/10} rating={rating} />
+        </div>
     )
 }
 
