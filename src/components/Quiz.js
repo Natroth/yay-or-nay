@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { FaThumbsUp, FaThumbsDown, FaRandom } from 'react-icons/fa';
+import { FaThumbsUp, FaThumbsDown, FaRandom, FaCheck } from 'react-icons/fa';
 import DiscreteSlider from './Slider';
 import Result from './Result';
 import {
@@ -58,22 +58,24 @@ function Quiz() {
    {/*             <FaThumbsUp className="thumb t-up" />
                 <FaThumbsDown className="thumb t-down" /> */}
                 <DiscreteSlider sendData={getData} />
-                <FaRandom
-            onClick={getInfo}
-            className="reroll thumb"
-            />
-            <button
-              onClick={getSliderVal} 
-             >Send</button>
+                <br />
+                    <div className="choices">
+                        <FaRandom
+                    onClick={getInfo}
+                    className="reroll thumb"
+                    />
+
+                    <Link to={{
+                        pathname:'/result',
+                        resultProps: {
+                            slider: sliderValue,
+                            voteAverage: thisMovie.vote_average,
+                            moviePoster: moviePoster
+                        }
+                    }}><FaCheck className="thumb go-to-result" /></Link>
+                   </div> 
+                </div>
             
-             <Link to={{
-                 pathname:'/result',
-                 resultProps: {
-                     slider: sliderValue,
-                     voteAverage: thisMovie.vote_average
-                 }
-             }}>Find Out</Link>
-            </div>
         </div>
     );
 }

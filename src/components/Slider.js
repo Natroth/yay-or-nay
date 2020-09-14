@@ -26,7 +26,7 @@ export default function DiscreteSlider(props) {
   return (
     <div className={classes.root}>
       <Typography id="discrete-slider" gutterBottom>
-        Rating
+        Rating:
       </Typography>
       <Slider
         defaultValue={5}

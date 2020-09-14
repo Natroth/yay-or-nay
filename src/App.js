@@ -13,6 +13,8 @@ import {
 } from "react-router-dom";
 import logo from './media/logo_trans.png';
 import Result from './components/Result';
+import Footer from './components/Footer';
+
 
 
 
@@ -38,7 +40,8 @@ function App() {
         </Switch>     
 
         </div>
-      </div>  
+      </div>
+      <Footer />  
     </div>
     </Router>
   );

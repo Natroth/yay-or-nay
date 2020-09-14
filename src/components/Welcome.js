@@ -5,7 +5,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import cutt from '../media/cutt.jpg'  
+import cutt from '../media/cutt.jpg';
   
 
 

@@ -4,6 +4,12 @@ import Quiz from './Quiz';
 import { useHistory } from "react-router-dom";
 import { Redirect } from 'react-router-dom';
 import ProgressBar from './ProgressBar'; 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 
@@ -22,12 +28,32 @@ var Result = (props) => {
 
      let rating = myProps.slider;
      let voteAverage = Math.round(myProps.voteAverage);
+     let moviePoster = myProps.moviePoster;
+     let correct = "";
+
+
+        if(rating === voteAverage) {
+            correct = `${rating} is Correct!`
+        }   
+        else if(rating < voteAverage) {
+            correct = `${rating} is Too Low!`
+        }
+        else if(rating > voteAverage) {
+            correct = ` ${rating} is Too High!`
+        }
+      
+
+
+
 
     return(
         <div>
-            <p>{rating}</p>
-            <p>{voteAverage}</p>
+            <p>{correct}</p>
+            <img src={moviePoster}></img>
+            <p>Average: {voteAverage}</p>
             <ProgressBar width={100} percent={voteAverage/10} rating={rating} />
+            <br />
+            <Link className="lets-begin" to="/quiz">Go Again</Link>
         </div>
     )
 }

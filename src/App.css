@@ -74,11 +74,19 @@
   }
   .vote-wrap {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: space-around;
     align-items: center;
     width: 70%;
     margin: auto;
+  }
+
+  .choices {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
   }
 
   .thumb {
@@ -87,6 +95,10 @@
     padding: 7px; 
     color: #fff;
     transition: font-size .2s;
+  }
+
+  .go-to-result {
+    background-color: green;
   }
 
   .thumb:hover {
@@ -115,14 +127,14 @@
     background-color: none;
   
     font-weight: bold;
-    color: #696969;
+    background-color: #696969;
   }
 
   .lets-begin {
     text-decoration: none;
     padding: 8px;
-    color: #fff;
-    background-color: #c0c0c0;
+   
+    color: #696969;
     border-radius: 5px; 
     text-shadow: 1px 1px #696969;
   }
@@ -154,4 +166,15 @@
     transition: 1s ease;
     transition-delay: 0.1s;
 
+}
+
+.footer {
+  display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    background-color: #fff;
+    width: 100%;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    align-items: center;
 }
