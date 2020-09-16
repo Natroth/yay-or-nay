@@ -22,7 +22,7 @@ var Result = (props) => {
 
 
         if(typeof myProps === 'undefined') {
-            return <Redirect to='/quiz' />
+            return <Redirect to='/' />
         }
 
 
@@ -42,7 +42,7 @@ var Result = (props) => {
             correct = ` ${rating} is Too High!`
         }
       
-
+        window.scrollTo(0, 0)
 
 
 

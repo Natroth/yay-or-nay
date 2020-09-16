@@ -6,6 +6,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    Redirect,
     Link
   } from "react-router-dom";
 
@@ -20,7 +21,7 @@ function Quiz() {
 
     let myQuery = `https://api.themoviedb.org/3/movie/popular?api_key=6f483d8afd56f030d7d97f6492987784&language=en-US&page=${pageNum}`;
   
-    let randPage = Math.floor(Math.random() * 100) + 1; 
+    let randPage = Math.floor(Math.random() * 500) + 1; 
     let randMovie = Math.floor(Math.random() * 19); 
   
     async function getInfo() {
@@ -36,6 +37,11 @@ function Quiz() {
   
     useEffect(() => {
        getInfo()
+
+       if(typeof myQuery === 'undefined') {
+        return <Redirect to='/' />
+    }
+
     }, []) 
 
     function getData(val){

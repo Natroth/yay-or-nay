@@ -9,7 +9,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import logo from './media/logo_trans.png';
 import Result from './components/Result';
@@ -35,8 +36,7 @@ function App() {
         <Switch>
         <Route path="/" component={Welcome} exact />
         <Route path="/quiz" component={Quiz} /> 
-        <Route path="/result" component={Result} exact /> 
-
+        <Route path="/result" component={Result} /> 
         </Switch>     
 
         </div>
