@@ -41,6 +41,9 @@
   }
 }
 
+html {
+  display: grid;
+}
 
 .bg-container{
 
@@ -175,6 +178,19 @@
     background-color: #fff;
     width: 100%;
     margin-top: 1.5rem;
-    height: 2.5rem;
+    height: 2.8rem;
     align-items: center;
+}
+
+.bottom-links {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 5rem;
+  font-size: 1.5rem;
+}
+
+.inner-link {
+  color: #000;
+  text-decoration: none;
 }
